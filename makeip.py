@@ -32,9 +32,12 @@ print "password?"
 pc = prpcrypt(raw_input())
 print "username@ip?"
 ip=raw_input()
-en=pc.encrypt(ip)
-print en
-print "decy", pc.decrypt(en),len(en)
+if  ip!="END":
+	en=pc.encrypt(ip)
+	print en
+	print "decy", pc.decrypt(en),len(en)
+else:
+	en="END"
 file_object = open('ip.txt', 'w')
 file_object.write(en)
 file_object.close( )
