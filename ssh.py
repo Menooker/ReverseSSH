@@ -37,7 +37,7 @@ last=""
 while True:
 	try:
 		print "Fetching IP"
-		u = urllib.urlopen("https://raw.githubusercontent.com/Menooker/Menooker/gh-pages/javascripts/test.txt")
+		u = urllib.urlopen("https://raw.githubusercontent.com/Menooker/ReverseSSH/master/ip.txt")
 		buffer = u.read()
 		if buffer[-1]=='\n' or buffer[-1]==' ' :
 			buffer=buffer[0:-1]
