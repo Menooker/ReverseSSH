@@ -1,5 +1,5 @@
 #coding: utf8
-import urllib
+import urllib2
 import subprocess
 
 import sys
@@ -37,7 +37,7 @@ last=""
 while True:
 	try:
 		print "Fetching IP"
-		u = urllib.urlopen("https://raw.githubusercontent.com/Menooker/ReverseSSH/master/ip.txt")
+		u = urllib2.urlopen("https://raw.githubusercontent.com/Menooker/ReverseSSH/master/ip.txt",timeout=10)
 		buffer = u.read()
 		if buffer[-1]=='\n' or buffer[-1]==' ' :
 			buffer=buffer[0:-1]
